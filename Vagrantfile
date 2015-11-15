@@ -44,7 +44,7 @@ Vagrant.configure(2) do |config|
   config.vm.define "pipe" do |pipe|
         pipe.vm.synced_folder "server_data", "/vagrant_data"
 	pipe.vm.network "private_network", ip: "192.168.33.10"
-	pipe.vm.provision "shell", path: "pipe.sh"
+	pipe.vm.provision "shell", path: "server_data/pipe.sh"
   end
 
 
